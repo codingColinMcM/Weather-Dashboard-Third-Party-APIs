@@ -1,1 +1,2 @@
-var script = "first variable in script!";
+var requestUrl = "";
+fetch(requestUrl);
