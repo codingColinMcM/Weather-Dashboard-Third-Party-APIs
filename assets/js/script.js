@@ -1,2 +1,7 @@
 var requestUrl = "";
-fetch(requestUrl);
+
+fetch(requestUrl)
+
+.then(function(response){
+    return response.json();
+})
