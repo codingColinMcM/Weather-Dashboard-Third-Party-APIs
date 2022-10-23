@@ -12,3 +12,4 @@ fetch(requestUrl)
 
 var change = "";
 var change = "";
+var change = "";
