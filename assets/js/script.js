@@ -11,3 +11,4 @@ fetch(requestUrl)
 })
 
 var change = "";
+var change = "";
