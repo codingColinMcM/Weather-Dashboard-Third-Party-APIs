@@ -9,8 +9,3 @@ fetch(requestUrl)
 .then(function(data){
     console.log(data)
 })
-
-var change = "";
-var change = "";
-var change = "";
-var change = "";
