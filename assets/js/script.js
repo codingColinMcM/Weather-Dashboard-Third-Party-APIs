@@ -53,7 +53,7 @@ function fetchWeather(location) {
     	)
     	.catch(function (err) {
       		console.error(err);
-    	});
+    	})
 
 }
 
