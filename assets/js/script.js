@@ -22,7 +22,7 @@ dayjs.extend(window.dayjs_plugin_timezone);
 
 function renderItems(city, data) {
   // renderCurrentWeather(city, data.current, data.timezone);
-  renderForecast(data.daily, data.timezone);
+  renderForecast(data.daily, data.timezone)
 }
 
 
