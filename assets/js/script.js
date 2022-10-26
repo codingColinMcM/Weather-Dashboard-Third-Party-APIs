@@ -3,6 +3,7 @@ var searchHistory = [];
 var weatherApiRootUrl = 'https://api.openweathermap.org';
 var weatherApiKey = 'd91f911bcf2c0f925fb6535547a5ddc9';
 
+
 // DOM element references
 var searchForm = document.querySelector('#search-form');
 var searchInput = document.querySelector('#search-input');
@@ -22,38 +23,61 @@ dayjs.extend(window.dayjs_plugin_timezone);
 
 function renderItems(city, data) {
   // renderCurrentWeather(city, data.current, data.timezone);
-  renderForecast(data.daily, data.timezone)
+  renderForecast(data.daily, data.timezone);
 }
 
 
 function fetchWeather(location) {
- 	var { lat } = location;
-  	var { lon } = location;
+ 	// var { lat } = location;
+  	// var { lon } = location;
+
   	var city = location.name;
- 	var apiUrl = `${weatherApiRootUrl}/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
+    var lat = 0;
+    var lon = 0;
+
+    var apiUrlCity = `${weatherApiRootUrl}/data/2.5/forecast?q=${city}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
+
+    fetch(apiUrlCity)
+        .then(
+
+            function (res) {
+                return res.json();
+        })
+        .then(
+        function (data) {
+
+        lat = data.city.coord.lat;
+        console.log("WTF",lat);
+        lon = data.city.coord.lon
+
+        var apiUrlLatLon = `${weatherApiRootUrl}/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
+
+        fetch(apiUrlLatLon)
+            .then(
+
+                function (res) {
+                    return res.json();
+                }
 
 
- 	fetch(apiUrl)
- 		.then(
+                )
+            .then(
+                function (data) {
 
- 			function (res) {
-	      		return res.json();
-	    	}
+                console.log("DATA", data);
+                renderItems(city, data);
 
+            }
+            )
+            .catch(function (err) {
+                console.error(err);
+            });
 
- 			)
-	    .then(
-	    	function (data) {
-
-	    	console.log("DATA", data)
-      		renderItems(city, data);
-
-
-    	}
-    	)
-    	.catch(function (err) {
-      		console.error(err);
-    	})
+            }
+            )
+        .catch(function (err) {
+                console.error(err);
+        });
 
 }
 
@@ -127,7 +151,5 @@ function renderForecastCard(forecast, timezone) {
 }
 
 fetchWeather({
-	lat: 10,
-	lon: 10,
 	name: "San Diego"
 })
