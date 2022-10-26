@@ -89,6 +89,22 @@ function fetchWeather(location) {
 
 }
 
+
+function renderCurrentWeather(city, currentData, timezone) {
+
+    var currentDay = dayjs().tz(timezone).add(0, 'day').startOf('day').unix();
+
+    var headingCol = document.createElement('div');
+    var heading = document.createElement('h3');
+
+    headingCol.setAttribute('class', 'col-12');
+    heading.textContent = `${city} (${currentDay})`;
+    headingCol.append(heading);
+
+    todayContainer.innerHTML = '';
+    todayContainer.append(headingCol);
+}
+
 // Function to display 5 day forecast.
 function renderForecast(dailyForecast, timezone) {
 // Create unix timestamps for start and end of 5 day forecast
