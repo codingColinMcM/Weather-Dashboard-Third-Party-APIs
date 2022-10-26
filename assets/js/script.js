@@ -32,7 +32,7 @@ $(document).ready(function () {
 })
 
 function renderItems(city, data) {
-    // renderCurrentWeather(city, data.current, data.timezone);
+    renderCurrentWeather(city, data.current, data.timezone);
     renderForecast(data.daily, data.timezone);
 }
 
