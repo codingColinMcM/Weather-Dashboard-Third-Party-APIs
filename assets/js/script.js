@@ -96,11 +96,13 @@ function renderCurrentWeather(city, currentData, timezone) {
     var currentDay = dayjs.unix(unixTs).tz(timezone).format('M/D/YYYY');
     var iconUrl = `https://openweathermap.org/img/w/${currentData.weather[0].icon}.png`;
     var iconDescription = currentData.weather[0].description;
+    var tempF = currentData.temp;
 
     var headingCol = document.createElement('div');
     var heading = document.createElement('div');
     var headingText = document.createElement('h3')
     var weatherIcon = document.createElement('img');
+    var tempEl = document.createElement('h5');
 
     headingCol.setAttribute('class', 'col-12');
     weatherIcon.setAttribute('src', iconUrl);
@@ -111,6 +113,8 @@ function renderCurrentWeather(city, currentData, timezone) {
     headingText.style.display = 'inline-block';
     heading.appendChild(weatherIcon);
     weatherIcon.style.display = 'inline-block';
+    tempEl.textContent = `Temp: ${tempF} °F`;
+    heading.appendChild(tempEl);
     
 
     todayContainer.append(headingCol)
