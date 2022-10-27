@@ -97,27 +97,32 @@ function renderCurrentWeather(city, currentData, timezone) {
     var iconUrl = `https://openweathermap.org/img/w/${currentData.weather[0].icon}.png`;
     var iconDescription = currentData.weather[0].description;
     var tempF = currentData.temp;
+    var humidityToday = currentData.humidity;
 
-    var headingCol = document.createElement('div');
+    var currentCol = document.createElement('div');
     var heading = document.createElement('div');
     var headingText = document.createElement('h3')
     var weatherIcon = document.createElement('img');
+    var body = document.createElement('div')
     var tempEl = document.createElement('h5');
+    var humidityEl = document.createElement('h5');
 
-    headingCol.setAttribute('class', 'col-12');
+    currentCol.setAttribute('class', 'col-12');
     weatherIcon.setAttribute('src', iconUrl);
     weatherIcon.setAttribute('alt', iconDescription);
     headingText.textContent = `${city} (${currentDay})`;
-    headingCol.append(heading);
+    currentCol.append(heading, body);
     heading.appendChild(headingText);
     headingText.style.display = 'inline-block';
     heading.appendChild(weatherIcon);
     weatherIcon.style.display = 'inline-block';
     tempEl.textContent = `Temp: ${tempF} °F`;
-    heading.appendChild(tempEl);
+    body.appendChild(tempEl);
+    humidityEl.textContent = `Humidity: ${humidityToday} %`;
+    body.appendChild(humidityEl);
     
 
-    todayContainer.append(headingCol)
+    todayContainer.append(currentCol)
 }
 
 // Function to display 5 day forecast.
