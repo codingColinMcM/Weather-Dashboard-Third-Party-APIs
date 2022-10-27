@@ -92,7 +92,8 @@ function fetchWeather(location) {
 
 function renderCurrentWeather(city, currentData, timezone) {
 
-    var currentDay = dayjs().tz(timezone).add(0, 'day').startOf('day').unix();
+    var unixTs = currentData.dt;
+    var currentDay = dayjs.unix(unixTs).tz(timezone).format('M/D/YYYY')
 
     var headingCol = document.createElement('div');
     var heading = document.createElement('h3');
