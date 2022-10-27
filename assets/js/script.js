@@ -93,17 +93,27 @@ function fetchWeather(location) {
 function renderCurrentWeather(city, currentData, timezone) {
 
     var unixTs = currentData.dt;
-    var currentDay = dayjs.unix(unixTs).tz(timezone).format('M/D/YYYY')
+    var currentDay = dayjs.unix(unixTs).tz(timezone).format('M/D/YYYY');
+    var iconUrl = `https://openweathermap.org/img/w/${currentData.weather[0].icon}.png`;
+    var iconDescription = currentData.weather[0].description;
 
     var headingCol = document.createElement('div');
-    var heading = document.createElement('h3');
+    var heading = document.createElement('div');
+    var headingText = document.createElement('h3')
+    var weatherIcon = document.createElement('img');
 
     headingCol.setAttribute('class', 'col-12');
-    heading.textContent = `${city} (${currentDay})`;
+    weatherIcon.setAttribute('src', iconUrl);
+    weatherIcon.setAttribute('alt', iconDescription);
+    headingText.textContent = `${city} (${currentDay})`;
     headingCol.append(heading);
+    heading.appendChild(headingText);
+    headingText.style.display = 'inline-block';
+    heading.appendChild(weatherIcon);
+    weatherIcon.style.display = 'inline-block';
+    
 
-    todayContainer.innerHTML = '';
-    todayContainer.append(headingCol);
+    todayContainer.append(headingCol)
 }
 
 // Function to display 5 day forecast.
