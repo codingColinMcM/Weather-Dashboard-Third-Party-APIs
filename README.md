@@ -2,7 +2,7 @@
 
 ##Description
 
-A web application
+A web application that displays the current weather 
 
 ##Screenshot
 
