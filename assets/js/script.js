@@ -22,28 +22,16 @@ var searchHistoryContainer = document.querySelector('#history');
 dayjs.extend(window.dayjs_plugin_utc);
 dayjs.extend(window.dayjs_plugin_timezone);
 
-$(document).ready(function () {
 
-    $(".search-button").on("click", function () {
-        cityToSearch = $(".form-input").val();
-
-        // fetchWeather(cityToSearch)
-    });
-})
 
 function renderItems(city, data) {
     renderCurrentWeather(city, data.current, data.timezone);
     renderForecast(data.daily, data.timezone);
 }
 
-function fetchWeather(location) {
-    // var { lat } = location;
-    // var { lon } = location;
-
+function fetchCoords(location) {
     var city = location;
-    var lat = 0;
-    var lon = 0;
-
+    
     var apiUrlCity = `${weatherApiRootUrl}/data/2.5/forecast?q=${city}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
 
     fetch(apiUrlCity)
@@ -59,8 +47,17 @@ function fetchWeather(location) {
         lon = data.city.coord.lon
 
         var apiUrlLatLon = `${weatherApiRootUrl}/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
+        fetchWeather(apiUrlLatLon, city);
+    })
+        .catch(function (err) {
+            console.error(err);
+        });
 
-        fetch(apiUrlLatLon)
+}
+
+function fetchWeather(locationPath, city) {
+    
+        fetch(locationPath)
             .then(
 
                 function (res) {
@@ -81,11 +78,12 @@ function fetchWeather(location) {
                 console.error(err);
             });
 
-            }
-            )
-        .catch(function (err) {
-                console.error(err);
-        });
+}
+
+function removeCurrentWeather() {
+
+    var removeThis = document.getElementById('remove-after');
+    removeThis.remove();
 
 }
 
@@ -109,6 +107,7 @@ function renderCurrentWeather(city, currentData, timezone) {
     var humidityEl = document.createElement('h5');
 
     currentCol.setAttribute('class', 'col-12');
+    currentCol.setAttribute('id', 'remove-after')
     weatherIcon.setAttribute('src', iconUrl);
     weatherIcon.setAttribute('alt', iconDescription);
     headingText.textContent = `${city} (${currentDay})`;
@@ -196,4 +195,22 @@ function renderForecastCard(forecast, timezone) {
     forecastContainer.append(col);
 }
 
-fetchWeather(cityToSearch)
+function handleSearch(e) {
+
+    if(!searchInput.value) {
+        return;
+    }
+
+    e.preventDefault();
+    var search = searchInput.value.trim();
+
+    debugger;
+    removeCurrentWeather();
+    fetchCoords(search);
+    searchInput.value = ''
+    
+}
+
+searchForm.addEventListener('submit', handleSearch);
+
+fetchCoords(cityToSearch)
