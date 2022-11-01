@@ -2,7 +2,7 @@
 
 ## Description
 
-A web application that displays the current weather and the 5-day forcast of the city the user searches. The initial landing page displays this data for San Diego. THIS WORKS
+A web application that displays the current weather and the 5-day forcast of the city the user searches. The initial landing page displays this data for San Diego. THIS WORKS DAMN
 
 ## Screenshot
 
