@@ -39,7 +39,6 @@ function savedCity(event) {
   searchHistory.innerHTML = "";
 
   displayList();
-  getCurrentWeather();
 }
 
 // make searched cities into a list of cities, and append to HTML
