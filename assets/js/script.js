@@ -14,10 +14,7 @@ var searchHistoryContainer = document.querySelector('#history');
 
 // Fetches weather data for given location from the Weather Geolocation
 // endpoint; then, calls functions to display current and forecast weather data.
-//location argument is an object {
-//	lat: 23423,
-//	lon: arsfe
-//}
+
 // Add timezone plugins to day.js
 dayjs.extend(window.dayjs_plugin_utc);
 dayjs.extend(window.dayjs_plugin_timezone);
@@ -43,8 +40,8 @@ function fetchCoords(location) {
         .then(
         function (data) {
 
-        lat = data.city.coord.lat;
-        lon = data.city.coord.lon
+        lat = data.coord.lat;
+        lon = data.coord.lon
 
         var apiUrlLatLon = `${weatherApiRootUrl}/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
         fetchWeather(apiUrlLatLon, city);
