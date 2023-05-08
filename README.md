@@ -1,16 +1,13 @@
 # weatherDashboard
 
-- [Screenshot](#sc)
-- [URL to App](#url)
-
 ## Description
 
-Problem
+### Problem:
 As a traveler, it can be difficult to plan a trip without knowing the weather outlook for 
 multiple cities. It can be time-consuming to search for weather information for each city 
 individually, and keeping track of multiple cities' weather conditions can be overwhelming.
 
-Solution
+### Solution:
 The weather dashboard application provides a solution to this problem by allowing users to 
 search for multiple cities and view the current and future weather conditions for each 
 city. The user can easily add cities to their search history and view the weather 
@@ -32,6 +29,15 @@ Overall, the weather dashboard application provides a convenient and user-friend
 for travelers who want to plan their trips according to the weather outlook for multiple 
 cities.
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshot](#screenshot)
+- [Screenshot](#sc)
+- [Deployed Application](#url)
+
 ## Screenshot
 <a name="sc"></a>
 
@@ -40,4 +46,29 @@ a936-3ef0d05e6b39.png)
 
 ## URL to App
 <a name="url"></a>
-https://codingcolinmcm.github.io/weatherDashboard/
+<a href="https://codingcolinmcm.github.io/weatherDashboard/">Weather Dashboard</a>
+
+##
+
+<pre>
+The MIT License
+
+© Colin McMurtray University at North Carolina Chapel Hill Coding Bootcamp MIT License Copyright (c) 2023 Permission is hereby granted, free of charge, to 
+any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including 
+without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to 
+whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
+THE SOFTWARE.
+</pre>
+
+## Questions?
+
+If you have any questions, please reach out to me using one of the following:
+
+- [Email](mailto:mcmurtraycolin@gmail.com)
+- [GitHub Profile](https://github.com/codingColinMcM)
