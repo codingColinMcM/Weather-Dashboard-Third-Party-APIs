@@ -1,7 +1,7 @@
 // Global variables
 var searchHistory = [];
-var weatherApiRootUrl = 'https://api.openweathermap.org';
-var weatherApiKey = 'a23926b23cbd7c1d7c67adf9564cfed5';
+const weatherApiRootUrl = 'https://api.openweathermap.org';
+const weatherApiKey = 'a23926b23cbd7c1d7c67adf9564cfed5';
 var cityToSearch = "San Diego";
 
 
