@@ -53,6 +53,7 @@ function displayList() {
 }
 
 displayList();
+document.addEventListener("submit", savedCity);
 
 function renderItems(city, data) {
     renderCurrentWeather(city, data.current, data.timezone);
@@ -236,7 +237,6 @@ function handleSearch(e) {
 
     debugger;
     removeCurrentWeather();
-    savedCity();
     fetchCoords(search);
     searchInput.value = ''
     
