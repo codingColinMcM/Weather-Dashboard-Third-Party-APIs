@@ -40,6 +40,8 @@ cities.
 
 ## Overview
 
+The application is organized into several files and folders:
+
 - The root directory of the repository contains the following files and folders:
 
   - index.html: This is the main HTML file that is displayed in the user's web browser. It includes references to the CSS and JavaScript 
