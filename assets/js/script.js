@@ -1,7 +1,7 @@
 // Global variables
 var searchHistory = [];
 var weatherApiRootUrl = 'https://api.openweathermap.org';
-var weatherApiKey = 'b236ff0d720cb0d8da58879df5a5aa5f';
+var weatherApiKey = 'a23926b23cbd7c1d7c67adf9564cfed5';
 var cityToSearch = "San Diego";
 
 
@@ -32,7 +32,7 @@ function renderItems(city, data) {
 function fetchCoords(location) {
     var city = location;
     
-    var apiUrlCity = `${weatherApiRootUrl}/data/2.5/forecast?q=${city}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
+    var apiUrlCity = `${weatherApiRootUrl}/data/2.5/weather?q=${city}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
 
     fetch(apiUrlCity)
         .then(
