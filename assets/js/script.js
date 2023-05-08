@@ -25,6 +25,7 @@ var cityArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 
 function savedCity(event) {
   // prevent page from refreshing
+  // UPDATE!!!
   // event.preventDefault();
 
   // create array of searched cities
