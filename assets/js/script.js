@@ -48,7 +48,7 @@ function displayList() {
 }
 
 displayList();
-searchBtn.click(savedCity);
+searchInput.click(savedCity);
 
 function renderItems(city, data) {
     renderCurrentWeather(city, data.current, data.timezone);
