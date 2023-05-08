@@ -1,4 +1,4 @@
-# weatherDashboard
+# Weather-Dashboard-Third-Party-APIs
 
 ## Description
 
