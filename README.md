@@ -38,6 +38,24 @@ cities.
 - [Screenshot](#sc)
 - [Deployed Application](#url)
 
+## Overview
+
+- The root directory of the repository contains the following files and folders:
+  - index.html: This is the main HTML file that is displayed in the user's web browser. It includes references to the CSS and JavaScript 
+  files that are needed to run the application.
+  - LICENSE: This file contains the license agreement for the weather dashboard application. It is licensed under the MIT License.
+  - README.md: This is the README file for the weather dashboard application, which provides information about the application, including 
+  how to install and use it.
+  - assets: This folder contains the assets (i.e., resources) that are used by the application, including images, icons, and fonts.
+- The assets folder contains the following subfolders:
+  - css: This folder contains the style.css file, which contains the CSS code for styling the HTML elements in the application.
+  - js: This folder contains the script.js file, which contains the JavaScript code for retrieving weather data from the openweathermap.org API, 
+processing the data, and updating the HTML elements in the application.
+Overall, the weather dashboard application is organized in a simple and straightforward manner, with all of the necessary files and folders 
+located in the root directory of the repository. The HTML, CSS, and JavaScript files are organized into separate folders, making it easy to 
+locate and modify the code as needed. The assets folder contains all of the resources that are used by the application, making it easy to 
+manage and update them.
+
 ## Screenshot
 <a name="sc"></a>
 
