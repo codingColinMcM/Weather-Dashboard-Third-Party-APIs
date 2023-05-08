@@ -235,7 +235,7 @@ function handleSearch(e) {
 
     debugger;
     removeCurrentWeather();
-    savedCity
+    savedCity();
     fetchCoords(search);
     searchInput.value = ''
     
