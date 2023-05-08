@@ -18,22 +18,24 @@ var searchHistoryContainer = document.querySelector('#history');
 dayjs.extend(window.dayjs_plugin_utc);
 dayjs.extend(window.dayjs_plugin_timezone);
 
+var searchHistory = document.querySelector(".list-group");
+
 // convert city strings to array, also load searched cities
 var cityArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 
-function savedCity() {
+function savedCity(event) {
   // prevent page from refreshing
   event.preventDefault();
 
   // create array of searched cities
-  cityInput = document.getElementByID("#city-input");
+  cityInput = document.getElementById("city-input").value;
   cityArray.push(cityInput);
 
   // convert city object into strings
   localStorage.setItem("savedCity", JSON.stringify(cityArray));
 
   // empty repeated city array elements and city weather history
-  searchHistoryContainer.empty();
+  searchHistory.innerHTML = "";
 
   displayList();
   getCurrentWeather();
@@ -42,13 +44,14 @@ function savedCity() {
 // make searched cities into a list of cities, and append to HTML
 function displayList() {
   for (var i = 0; i < cityArray.length; i++) {
-    var cityList = $("<li>").addClass("list-group-item").text(cityArray[i]);
-    searchHistoryContainer.append(cityList);
+    var cityList = document.createElement("li");
+    cityList.className = "list-group-item";
+    cityList.textContent = cityArray[i];
+    searchHistory.appendChild(cityList);
   }
 }
 
 displayList();
-searchInput.click(savedCity);
 
 function renderItems(city, data) {
     renderCurrentWeather(city, data.current, data.timezone);
@@ -232,6 +235,7 @@ function handleSearch(e) {
 
     debugger;
     removeCurrentWeather();
+    savedCity
     fetchCoords(search);
     searchInput.value = ''
     
