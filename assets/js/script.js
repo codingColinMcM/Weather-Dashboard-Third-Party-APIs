@@ -29,6 +29,7 @@ function savedCity(event) {
 
   // create array of searched cities
   var cityValue = searchInput.value;
+  //PLEASE UPDATE!!!
   console.log(searchInput);
   cityArray.push(cityValue);
 
