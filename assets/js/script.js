@@ -24,8 +24,6 @@ var searchHistory = document.querySelector(".list-group");
 var cityArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 
 function savedCity(event) {
-  // prevent page from refreshing
-  event.preventDefault();
 
   // create array of searched cities
   var cityValue = searchInput.value.trim();
@@ -52,7 +50,6 @@ function displayList() {
 }
 
 displayList();
-document.addEventListener("submit", savedCity);
 
 function renderItems(city, data) {
     renderCurrentWeather(city, data.current, data.timezone);
@@ -235,6 +232,7 @@ function handleSearch(e) {
     var search = searchInput.value.trim();
 
     debugger;
+    savedCity();
     removeCurrentWeather();
     fetchCoords(search);
     searchInput.value = ''
