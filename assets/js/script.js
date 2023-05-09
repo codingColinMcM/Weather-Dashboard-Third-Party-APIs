@@ -40,7 +40,7 @@ function savedCity(location) {
 // make searched cities into a list of cities, and append to HTML
 function displayList(location) {
   for (var i = 0; i < historyArray.length; i++) {
-    if (!(historyArray[i] == "" || historyArray.includes(location)) {
+    if (!(historyArray[i] == "" || historyArray.includes(location))) {
       var historyList = document.createElement("li");
       historyList.className = "list-group-item";
       historyList.textContent = historyArray[i];
@@ -221,7 +221,7 @@ function renderForecastCard(forecast, timezone) {
 
     forecastContainer.append(col);
 }
-//PLEASE WORK AND UPDATE, I AM BEGGING YOU!!!
+
 function handleSearch(e) {
 
     if(!searchInput.value) {
