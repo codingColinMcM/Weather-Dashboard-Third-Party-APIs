@@ -20,7 +20,7 @@ dayjs.extend(window.dayjs_plugin_timezone);
 var searchHistory = document.querySelector(".list-group");
 
 // convert city strings to array, also load searched cities
-var cityArray = JSON.parse(localStorage.getItem("savedCity")) || [];
+var historyArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 
 function savedCity(location) {
 
