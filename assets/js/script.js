@@ -219,7 +219,7 @@ function renderForecastCard(forecast, timezone) {
 
     forecastContainer.append(col);
 }
-//PLEASE WORK FOR THE LOVE OF GOD!!!
+//PLEASE WORK AND UPDATE FOR THE LOVE OF GOD!!!
 function handleSearch(e) {
 
     if(!searchInput.value) {
