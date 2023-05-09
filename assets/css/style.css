@@ -1791,3 +1791,10 @@
     background: -moz-linear-gradient(right, #20084a, #3463bc);
     background: linear-gradient(to left, #20084a, #3463bc);
   }
+
+   .list-group-item {
+     background-color: #e3f4fe;
+     text-align: center;
+     margin: 6px 0;
+     border-radius: 5px;
+   }
