@@ -22,6 +22,8 @@ var searchHistory = document.querySelector(".list-group");
 // convert city strings to array, also load searched cities
 var historyArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 
+// DEPLOY, WORK PROPERLY, AND UPDATE!!!!! ICH BITTE SIE!!!!
+
 function savedCity(location) {
 
   // add to the array if there its a valid input and non-duplicate 
@@ -37,7 +39,7 @@ function savedCity(location) {
 
   displayList(location);
 }
-// DEPLOY, WORK PROPERLY, AND UPDATE!!!!! ICH BITTE SIE!!!!
+
 // make searched cities into a list of cities, and append to HTML
 function displayList(location) {
   for (var i = 0; i < historyArray.length; i++) {
