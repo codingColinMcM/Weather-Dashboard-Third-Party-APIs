@@ -22,15 +22,14 @@ var searchHistory = document.querySelector(".list-group");
 // convert city strings to array, also load searched cities
 var cityArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 
-function savedCity(event) {
+function savedCity(location) {
 
   // create array of searched cities
-  var cityValue = searchInput.value.trim();
-  console.log(cityValue);
-  cityArray.push(cityValue);
+  console.log(search);
+  historyArray.push(cityValue);
 
   // convert city object into strings
-  localStorage.setItem("savedCity", JSON.stringify(cityArray));
+  localStorage.setItem("savedCity", JSON.stringify(historyArray));
 
   // empty repeated city array elements and city weather history
   searchHistory.innerHTML = "";
@@ -231,7 +230,7 @@ function handleSearch(e) {
     var search = searchInput.value.trim();
 
     debugger;
-    savedCity();
+    savedCity(search);
     removeCurrentWeather();
     fetchCoords(search);
     searchInput.value = ''
