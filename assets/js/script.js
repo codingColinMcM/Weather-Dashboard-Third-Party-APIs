@@ -34,16 +34,18 @@ function savedCity(location) {
   // empty repeated city array elements and city weather history
   searchHistory.innerHTML = "";
 
-  displayList();
+  displayList(location);
 }
 
 // make searched cities into a list of cities, and append to HTML
-function displayList() {
+function displayList(location) {
   for (var i = 0; i < historyArray.length; i++) {
-    var historyList = document.createElement("li");
-    historyList.className = "list-group-item";
-    historyList.textContent = historyArray[i];
-    searchHistory.appendChild(historyList);
+    if (!(historyArray[i] == "" || historyArray.includes(location)) {
+      var historyList = document.createElement("li");
+      historyList.className = "list-group-item";
+      historyList.textContent = historyArray[i];
+      searchHistory.appendChild(historyList);
+    }
   }
 }
 
