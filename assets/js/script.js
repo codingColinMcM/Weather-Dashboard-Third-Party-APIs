@@ -26,7 +26,7 @@ function savedCity(location) {
 
   // create array of searched cities
   console.log(location);
-  historyArray.push(cityValue);
+  historyArray.push(location);
 
   // convert city object into strings
   localStorage.setItem("savedCity", JSON.stringify(historyArray));
@@ -39,11 +39,11 @@ function savedCity(location) {
 
 // make searched cities into a list of cities, and append to HTML
 function displayList() {
-  for (var i = 0; i < cityArray.length; i++) {
-    var cityList = document.createElement("li");
-    cityList.className = "list-group-item";
-    cityList.textContent = cityArray[i];
-    searchHistory.appendChild(cityList);
+  for (var i = 0; i < historyArray.length; i++) {
+    var historyList = document.createElement("li");
+    historyList.className = "list-group-item";
+    historyList.textContent = historyArray[i];
+    searchHistory.appendChild(historyList);
   }
 }
 
