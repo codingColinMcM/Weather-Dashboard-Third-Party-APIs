@@ -36,7 +36,7 @@ function savedCity(location) {
 
   displayList(location);
 }
-// PLEASE WORK!!! DEPLOY PROPERLY AND UPDATE!!!!! BITTE
+// PLEASE WORK!!! DEPLOY PROPERLY AND UPDATE!!!!! ICH BITTE SIE
 // make searched cities into a list of cities, and append to HTML
 function displayList(location) {
   for (var i = 0; i < historyArray.length; i++) {
