@@ -22,7 +22,7 @@ var searchHistory = document.querySelector(".list-group");
 // convert city strings to array, also load searched cities
 var historyArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 
-// UPDATE AND WORK PROPERLY!!!!! ICH BITTE SIE!!!!
+// UPDATE AND WORK PROPERLY! ICH BITTE SIE!!!!
 
 function savedCity(location) {
 
