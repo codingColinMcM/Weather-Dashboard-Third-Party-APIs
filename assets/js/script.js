@@ -30,6 +30,7 @@ function savedCity(event) {
 
   // create array of searched cities
   var cityValue = searchInput.value;
+  console.log(cityValue);
   cityArray.push(cityValue);
 
   // convert city object into strings
