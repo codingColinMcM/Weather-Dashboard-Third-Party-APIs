@@ -221,7 +221,7 @@ function renderForecastCard(forecast, timezone) {
 
     forecastContainer.append(col);
 }
-//PLEASE WORK AND UPDATE FOR THE LOVE OF GOD, I AM BEGGING YOU!!!
+//PLEASE WORK AND UPDATE, I AM BEGGING YOU!!!
 function handleSearch(e) {
 
     if(!searchInput.value) {
