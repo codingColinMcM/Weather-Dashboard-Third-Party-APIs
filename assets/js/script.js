@@ -3,7 +3,6 @@ const weatherApiRootUrl = 'https://api.openweathermap.org';
 const weatherApiKey = 'a23926b23cbd7c1d7c67adf9564cfed5';
 var cityToSearch = "San Diego";
 
-
 // DOM element references
 var searchForm = document.querySelector('#search-form');
 var searchInput = document.querySelector('#search-input');
@@ -221,7 +220,7 @@ function renderForecastCard(forecast, timezone) {
 
     forecastContainer.append(col);
 }
-
+//PLEASE UPDATE!!!
 function handleSearch(e) {
 
     if(!searchInput.value) {
