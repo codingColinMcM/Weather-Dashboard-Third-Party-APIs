@@ -27,7 +27,7 @@ var historyArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 function savedCity(location) {
 
   // add to the array if there its a valid input and non-duplicate 
-  if (!(historyArray[i] == "" || historyArray.includes(location))) {
+  if (!(location == "" || historyArray.includes(location))) {
     historyArray.push(location);
   }
 
