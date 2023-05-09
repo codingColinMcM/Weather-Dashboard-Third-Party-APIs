@@ -219,7 +219,7 @@ function renderForecastCard(forecast, timezone) {
 
     forecastContainer.append(col);
 }
-//PLEASE!!!
+//PLEASE WORK!!!
 function handleSearch(e) {
 
     if(!searchInput.value) {
