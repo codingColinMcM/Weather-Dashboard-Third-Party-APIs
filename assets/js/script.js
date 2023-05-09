@@ -24,9 +24,10 @@ var historyArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 
 function savedCity(location) {
 
-  // create array of searched cities
-  console.log(location);
-  historyArray.push(location);
+  // add to the array if there its a valid input and non-duplicate 
+  if (!(historyArray[i] == "" || historyArray.includes(location))) {
+    historyArray.push(location);
+  }
 
   // convert city object into strings
   localStorage.setItem("savedCity", JSON.stringify(historyArray));
@@ -40,12 +41,10 @@ function savedCity(location) {
 // make searched cities into a list of cities, and append to HTML
 function displayList(location) {
   for (var i = 0; i < historyArray.length; i++) {
-    if (!(historyArray[i] == "" || historyArray.includes(location))) {
-      var historyList = document.createElement("li");
-      historyList.className = "list-group-item";
-      historyList.textContent = historyArray[i];
-      searchHistory.appendChild(historyList);
-    }
+     var historyList = document.createElement("li");
+     historyList.className = "list-group-item";
+     historyList.textContent = historyArray[i];
+     searchHistory.appendChild(historyList);
   }
 }
 
