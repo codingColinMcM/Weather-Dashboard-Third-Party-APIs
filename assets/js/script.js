@@ -25,7 +25,7 @@ var cityArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 function savedCity(location) {
 
   // create array of searched cities
-  console.log(search);
+  console.log(location);
   historyArray.push(cityValue);
 
   // convert city object into strings
