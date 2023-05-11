@@ -34,7 +34,6 @@ cities.
 - [Overview](#overview)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshot](#screenshot)
 - [Screenshot](#sc)
 - [Deployed Application](#url)
 
