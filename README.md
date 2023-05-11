@@ -36,6 +36,8 @@ cities.
 - [Usage](#usage)
 - [Screenshot](#sc)
 - [Deployed Application](#url)
+- [License](#license)
+- [Questions?](#questions?)
 
 ## Overview
 
