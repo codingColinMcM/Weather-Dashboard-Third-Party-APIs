@@ -8,26 +8,21 @@ multiple cities. It can be time-consuming to search for weather information for 
 individually, and keeping track of multiple cities' weather conditions can be overwhelming.
 
 ### Solution:
-The weather dashboard application provides a solution to this problem by allowing users to 
-search for multiple cities and view the current and future weather conditions for each 
-city. The user can easily add cities to their search history and view the weather 
-conditions for those cities again later.
+To address the challenge of searching for weather information for multiple cities, I have developed a weather dashboard application that provides a convenient and user-friendly solution for travelers who want to plan their trips according to the weather outlook for multiple cities. The weather dashboard application includes the following features:
 
-When the user searches for a city, the application retrieves the current and future weather 
-conditions for that city from the openweathermap.org API and displays the information in a 
-clear and intuitive format. The user can see the city name, date, icon representation of 
-weather conditions, temperature, humidity, and wind speed for the current weather 
-conditions. For the future weather conditions, the user can see a 5-day forecast that 
-displays the date, icon representation of weather conditions, temperature, wind speed, and 
-humidity.
+1. Users can search for multiple cities and view the current and future weather conditions for each city.
 
-The search history feature allows the user to easily access weather information for 
-previously searched cities. When the user clicks on a city in the search history, the 
-current and future weather conditions for that city are displayed again.
+2. The application allows users to easily add cities to their search history and view the weather conditions for those cities again later.
 
-Overall, the weather dashboard application provides a convenient and user-friendly solution 
-for travelers who want to plan their trips according to the weather outlook for multiple 
-cities.
+3. When the user searches for a city, the application retrieves the current and future weather conditions for that city from the openweathermap.org API and displays the information in a clear and intuitive format.
+
+4. For the current weather conditions, the user can see the city name, date, and icon representation of weather conditions, temperature, humidity, and wind speed.
+
+5. For future weather conditions, the user can see a 5-day forecast that displays the date, icon representation of weather conditions, temperature, wind speed, and humidity.
+
+6. The search history feature allows the user to easily access weather information for previously searched cities. When the user clicks on a city in the search history, the current and future weather conditions for that city are displayed again.
+
+Overall, the weather dashboard application provides a comprehensive solution for travelers who want to stay informed about the weather conditions in multiple cities and plan their trips accordingly. The application is easy to use, and the clear and intuitive display of weather information makes it an invaluable tool for travelers.
 
 ## Table of Contents
 
