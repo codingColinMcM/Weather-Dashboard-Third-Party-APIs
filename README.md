@@ -66,7 +66,7 @@ locate and modify the code as needed. The assets folder contains all of the reso
 manage and update them.
 
 ## Installation Instructions
-To use the weather dashboard application, simply download the files from the repository and open the index.html file in your web browser.
+To use the weather dashboard application, simply clone or download the files from the repository and open the index.html file in your web browser.
 
 ## Usage Instructions
 To use the weather dashboard application, follow these steps:
