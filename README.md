@@ -75,8 +75,7 @@ The current weather conditions and a five-day forecast for the selected location
 ## Screenshot
 <a name="sc"></a>
 
-![image](https://user-images.githubusercontent.com/112663656/198859584-5e880983-e237-40c7-
-a936-3ef0d05e6b39.png)
+![Screen Shot 2023-05-11 at 2 35 54 PM](https://github.com/codingColinMcM/Weather-Dashboard-Third-Party-APIs/assets/112663656/56c9ccda-3395-4509-85e0-5a4261e9b402)
 
 ## URL to App
 <a name="url"></a>
