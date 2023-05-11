@@ -65,6 +65,16 @@ located in the root directory of the repository. The HTML, CSS, and JavaScript f
 locate and modify the code as needed. The assets folder contains all of the resources that are used by the application, making it easy to 
 manage and update them.
 
+## Installation Instructions
+To use the weather dashboard application, simply download the files from the repository and open the index.html file in your web browser.
+
+## Usage Instructions
+To use the weather dashboard application, follow these steps:
+
+Open the index.html file in your web browser.
+Enter a location in the search bar and click the "Search" button.
+The current weather conditions and a five-day forecast for the selected location will be displayed.
+
 ## Screenshot
 <a name="sc"></a>
 
