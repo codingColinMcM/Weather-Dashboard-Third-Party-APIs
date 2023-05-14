@@ -2,8 +2,6 @@
 
 ## Description
 
-these are my github
-
 ### Problem:
 As a traveler, it can be difficult to plan a trip without knowing the weather outlook for 
 multiple cities. It can be time-consuming to search for weather information for each city 
