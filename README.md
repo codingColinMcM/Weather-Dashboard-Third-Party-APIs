@@ -2,7 +2,7 @@
 
 ## Description
 
-these are
+these are my 
 
 ### Problem:
 As a traveler, it can be difficult to plan a trip without knowing the weather outlook for 
