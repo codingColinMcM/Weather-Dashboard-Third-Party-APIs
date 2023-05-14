@@ -2,7 +2,7 @@
 
 ## Description
 
-these are my 
+these are my github
 
 ### Problem:
 As a traveler, it can be difficult to plan a trip without knowing the weather outlook for 
