@@ -79,7 +79,7 @@ The current weather conditions and a five-day forecast for the selected location
 
 ## URL to App
 <a name="url"></a>
-<a href="https://codingcolinmcm.github.io/weatherDashboard/">Weather Dashboard</a>
+<a href="https://codingcolinmcm.github.io/Weather-Dashboard-Third-Party-APIs/">Weather Dashboard</a>
 
 ##
 
