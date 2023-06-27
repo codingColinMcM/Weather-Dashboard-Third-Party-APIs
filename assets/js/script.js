@@ -22,8 +22,6 @@ var searchHistory = document.querySelector(".list-group");
 // convert city strings to array, also load searched cities
 var historyArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 
-// UPDATE AND WORK PROPERLY! ICH BITTE SIE!!!! COME ON!!!
-
 function savedCity(location) {
 
   // add to the array if there its a valid input and non-duplicate 
@@ -41,16 +39,31 @@ function savedCity(location) {
 }
 
 // make searched cities into a list of cities, and append to HTML
-function displayList(location) {
-  for (var i = 0; i < historyArray.length; i++) {
-     var historyList = document.createElement("li");
-     historyList.className = "list-group-item";
-     historyList.textContent = historyArray[i];
-     searchHistory.appendChild(historyList);
+function displayList() {
+    for (var i = 0; i < historyArray.length; i++) {
+      var historyListItem = document.createElement("li"); // Create a <li> element
+      var historyButton = document.createElement("button"); // Create a <button> element
+      historyButton.className = "list-group-item";
+      historyButton.textContent = historyArray[i];
+      historyButton.id = historyArray[i]; // Set the id of the button to the text inside it
+      historyListItem.appendChild(historyButton); // Append the button to the <li> element
+      searchHistory.appendChild(historyListItem); // Append the <li> element to the parent container
+    }
   }
-}
+  
 
 displayList();
+
+var searchHistoryClickHandler = function(event) {
+    console.log("Please!")
+    var citySearch = event.target.getAttribute("id");
+    if (citySearch) {
+        //Clear Past Movie Info & Rerun Search
+        searchInput.innerHTML = "";
+        removeCurrentWeather();
+        fetchCoords(citySearch);
+    };
+};
 
 function renderItems(city, data) {
     renderCurrentWeather(city, data.current, data.timezone);
@@ -225,6 +238,8 @@ function renderForecastCard(forecast, timezone) {
 
 function handleSearch(e) {
 
+    console.log("Hello?")
+
     if(!searchInput.value) {
         return;
     }
@@ -241,5 +256,7 @@ function handleSearch(e) {
 }
 
 searchForm.addEventListener('submit', handleSearch);
+
+searchHistoryContainer.addEventListener("click", searchHistoryClickHandler);
 
 fetchCoords(cityToSearch)
