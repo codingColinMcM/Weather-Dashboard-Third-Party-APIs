@@ -1,6 +1,6 @@
 # Weather-Dashboard-Third-Party-APIs
 
-I really shouldn't be sitting by with my thumb up my
+I really shouldn't be sitting by with my thumb up my ass
 
 ## Description
 
