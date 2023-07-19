@@ -1,7 +1,5 @@
 # Weather-Dashboard-Third-Party-APIs
 
-I really shouldn't be sitting by with my thumb up my ass. I should be making more flashcards so I can
-
 ## Description
 
 ### Problem:
