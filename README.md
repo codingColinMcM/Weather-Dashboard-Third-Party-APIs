@@ -1,6 +1,6 @@
 # Weather-Dashboard-Third-Party-APIs
 
-I finally have iPhone fully set up so now I can interact more easy with 
+I finally have iPhone fully set up so now I can interact more easy with people
 
 ## Description
 
