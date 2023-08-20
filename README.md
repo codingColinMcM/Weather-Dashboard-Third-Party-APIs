@@ -1,6 +1,6 @@
 # Weather-Dashboard-Third-Party-APIs
 
-I finally have iPhone fully set up so now  
+I finally have iPhone fully set up so now I 
 
 ## Description
 
