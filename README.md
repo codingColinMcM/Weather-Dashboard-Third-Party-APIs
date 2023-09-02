@@ -1,7 +1,5 @@
 # Weather-Dashboard-Third-Party-APIs
 
-hhhhhhhhhhhhhhhjkhh
-
 ## Description
 
 ### Problem:
