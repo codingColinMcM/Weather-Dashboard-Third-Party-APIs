@@ -1,6 +1,6 @@
 # Weather-Dashboard-Third-Party-APIs
 
-I am about to go lift some weights. I did 
+I am about to go lift some weights. I did alot
 
 ## Description
 
