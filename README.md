@@ -1,6 +1,6 @@
 # Weather-Dashboard-Third-Party-APIs
 
-I am about to
+I am about to go
 
 ## Description
 
