@@ -1,6 +1,6 @@
 # Weather-Dashboard-Third-Party-APIs
 
-I am about to go lift some weights. I did a lot of Norwegian 
+I am about to go lift some weights. I did a lot of Norwegian this
 
 ## Description
 
