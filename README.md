@@ -1,7 +1,5 @@
 # Weather-Dashboard-Third-Party-APIs
 
-I am about to go lift some weights. I did a lot of Norwegian this morning. God dag. Jeg er veldig sterk. Vaeret er sol er ikke overskytt.
-
 ## Description
 
 ### Problem:
